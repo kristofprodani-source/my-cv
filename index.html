@@ -9,94 +9,84 @@
 <body>
 
 <header>
-    <h1>Your Name</h1>
-    <p>Your Title / Tagline</p>
+    <div class="hero">
+        <h1 class="name">Kristof Prodani</h1>
+        <p class="title">Future Developer 💻</p>
+    </div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <main>
 
-    <section id="about">
+<section id="about" class="hidden">
     <h2>About Me</h2>
-
-```
-<div class="about-container">
-    <img src="photo.jpg" alt="My Photo" class="profile-img">
-
-    <p>
-        I am a 17-year-old student with a strong interest in technology, programming, and personal growth. 
-        I enjoy learning new skills, especially in coding and problem-solving, and I am constantly working 
-        on improving myself both academically and physically. My goal is to build a successful future in tech 
-        and create projects that make a real impact.
-    </p>
-</div>
-```
-
+    <p>I am a motivated student learning programming and aiming to become a professional developer.</p>
 </section>
 
-
-    <section id="experience">
-    <h2>Experience</h2>
-
-```
-<div class="item">
-    <h3>Personal Projects</h3>
-    <p><strong>2026 - Present</strong></p>
-    <p>
-        Building personal projects using HTML, CSS, and JavaScript. 
-        Created a CV website and continuously improving coding skills through practice and experimentation.
-    </p>
-</div>
-```
-
-</section>
-
-<section id="education">
-    <h2>Education</h2>
-
-```
-<div class="item">
-    <h3>High School Student</h3>
-    <p><strong>Expected Graduation: 2027</strong></p>
-    <p>
-        Focused on science and technology subjects, with strong academic performance and continuous self-development.
-    </p>
-</div>
-```
-
-</section>
-
-    <section id="skills">
+<section id="skills" class="hidden">
     <h2>Skills</h2>
-
-```
-<ul>
-    <li>HTML & CSS</li>
-    <li>JavaScript Basics</li>
-    <li>Problem Solving</li>
-    <li>Git & GitHub</li>
-    <li>Continuous Learning</li>
-</ul>
-```
-
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>C Programming</li>
+        <li>Problem Solving</li>
+    </ul>
 </section>
 
-<section id="contact">
+<section id="experience" class="hidden">
+    <h2>Experience</h2>
+    <p>Currently learning and building personal projects.</p>
+    <p>Practicing coding daily and improving problem-solving skills.</p>
+</section>
+
+<section id="education" class="hidden">
+    <h2>Education</h2>
+    <p>High School Student</p>
+    <p>Focused on science and technology subjects.</p>
+</section>
+
+<section id="projects" class="hidden">
+    <h2>Projects</h2>
+    <ul>
+        <li>Personal CV Website</li>
+        <li>Simple C Programs</li>
+        <li>Mini Web Projects</li>
+    </ul>
+</section>
+
+<section id="contact" class="hidden">
     <h2>Contact</h2>
-
-```
-<p>Email: your-email@example.com</p>
-<p>GitHub: https://github.com/kristofprodani-source</p>
-```
-
+    <p>Email: your@email.com</p>
+    <p>Phone: +355...</p>
 </section>
 
 </main>
 
 <footer>
-    <p>© 2026 Your Name</p>
+    <p>© 2026 My CV</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
